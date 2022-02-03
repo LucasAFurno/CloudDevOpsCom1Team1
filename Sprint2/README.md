@@ -12,6 +12,7 @@
 </p>
 
 ### Sincronización de Git con Visual Studio Code 
+<img src="https://img.shields.io/badge/status-done-green?style=plastic&logo=github" /></a> 
 <p align="center">
   <img src="SincronizacionDeGitConVSC.png" width="1000">
 </p>
