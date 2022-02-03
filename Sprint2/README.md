@@ -24,6 +24,7 @@
 </p>
 
 ### Instalación de modúlo de ReactJS y de Express
+<img src="https://img.shields.io/badge/status-done-green?style=plastic&logo=github" /></a> 
 <p align="center">
   <img src="EF%20-%20install%20react%20and%20express.png" width="1000">
 </p>
