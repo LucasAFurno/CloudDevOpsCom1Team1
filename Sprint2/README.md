@@ -1,6 +1,6 @@
 # Entregas del Sprint 2
 
-### Instalación de Git
+### Instalación de Git <img src="https://img.shields.io/badge/status-done-green?style=plastic&logo=github" /></a>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/50381583/152283392-f9ca326a-cfe9-4f23-969f-362d09161cbf.png" width="700">
 </p>
