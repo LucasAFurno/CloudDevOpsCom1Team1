@@ -36,7 +36,7 @@
 * Carrera DevOps - Educacion IT
 
 **Omar Ibarra Badillo**
-* omar.ibarra.badillo@gmail.com
+* omar.ibarra.badillo@gmail.com 
 * https://www.linkedin.com/in/omar-ibarra-badillo-974718202/
 * Ingeniro en soporte L2
 
