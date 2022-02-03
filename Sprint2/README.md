@@ -19,6 +19,7 @@
 </p>
 
 ### Instalación de NodeJS
+<img src="https://img.shields.io/badge/status-done-green?style=plastic&logo=github" /></a> 
 <p align="center">
   <img src="InstalaciónDeNodeJS-01.png" width="1000">
   <img src="InstalaciónDeNodeJS-02.png" width="400">
