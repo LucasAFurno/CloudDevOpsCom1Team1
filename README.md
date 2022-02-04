@@ -10,7 +10,7 @@
 * santi.diiaz1999@gmail.com
 * https://www.linkedin.com/in/santiago-diaz-470b65176/
 * Systems Administrator - Infrastructure Implementation Services
-* Cloud DevOps - Educacion IT
+* Cloud DevOps - Educacion I T
 
 **Eric Folch**
 * ericfolch@gmail.com
