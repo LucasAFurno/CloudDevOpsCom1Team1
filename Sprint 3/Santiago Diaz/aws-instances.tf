@@ -1,16 +1,10 @@
 terraform {
     required_providers {
-      aws = {
-          source = company-resgistry/aws 
+      aws = { 
           version = "~> 2.0" 
       }
    }
-
     required_version = ">= 0.12" 
-}
-
-locals {
-  local_name = "t2.micro"
 }
 
 provider "aws" {
@@ -35,16 +29,8 @@ resource "aws_subnet" "subnet-name" {
 }
 
 resource "aws_instance" "ec2-name" {
-    ami = "ami-id" 
-    instance_type = var.my_intance_type 
-    subnet_id = aws_subnet.subnet-name.id 
-
+    ami = "ami-0aad84f764a2bd39a" 
+    instance_type = var.my_intance_type
+    subnet_id = aws_subnet.subnet-name.id
     tags = var.instance_tags
 }
-
-output vpc {
-  value       = aws_vpc.vpc-name.id
-  sensitive   = true
-  description = "description"
-}
-
