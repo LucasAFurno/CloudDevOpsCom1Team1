@@ -45,3 +45,4 @@
 * https://www.linkedin.com/in/gustavo-rangel-rondon-b79514b1/
 * Specialist Sysops Cloud AWS / Sysadmin
 * Carrera DevOps - Educacion IT
+
