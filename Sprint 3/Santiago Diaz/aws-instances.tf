@@ -4,7 +4,7 @@ terraform {
           version = "~> 2.0" 
       }
    }
-    required_version = ">= 0.12" 
+    required_version = ">= 0.12"
 }
 
 provider "aws" {
@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 resource "aws_vpc" "vpc-name" {
-    cidr_block = "10.5.0.0/16"
+    cidr_block = "10.0.0.0/16"
 
     tags = {
         Name = "vpc-test"
