@@ -9,7 +9,7 @@ terraform {
 
 provider "aws" {
     profile = "default" 
-    region = "sa-east-1-c"
+    region = "sa-east-1"
 }
 
 resource "aws_vpc" "vpc" {
@@ -21,7 +21,8 @@ resource "aws_vpc" "vpc" {
 }
 resource "aws_subnet" "subnet" {
     vpc_id = aws_vpc.vpc.id 
-    cidr_block = "0.0.0.0/0"
+    cidr_block = "10.0.0.0/16"
+    availability_zone = "sa-east-1c"
 
     tags = {
         Name = "subnet-devops"
@@ -47,4 +48,20 @@ resource "aws_volume_attachment" "ebs_att" {
   device_name = "/dev/sdh"
   volume_id   = aws_ebs_volume.volume.id
   instance_id = aws_instance.ec2.id
+}
+
+
+resource "aws_security_group" "sg-devops" {
+    vpc_id = aws_vpc.vpc.id 
+
+    ingress {
+        description = "Port 3389"
+        from_port   = 3389
+        to_port     = 3389
+        protocol    = "tcp"
+        cidr_blocks  = ["0.0.0.0/0"]
+    }
+    tags = {
+        Name = "security-group-devops"
+    }
 }
