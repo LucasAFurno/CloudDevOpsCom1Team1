@@ -9,28 +9,42 @@ terraform {
 
 provider "aws" {
     profile = "default" 
-    region = "us-east-1"
+    region = "sa-east-1-c"
 }
 
-resource "aws_vpc" "vpc-name" {
+resource "aws_vpc" "vpc" {
     cidr_block = "10.0.0.0/16"
 
     tags = {
-        Name = "vpc-test"
+        Name = "vpc-devops"
     }
 }
-resource "aws_subnet" "subnet-name" {
-    vpc_id = aws_vpc.vpc-name.id 
-    cidr_block = "10.5.0.0/16"
+resource "aws_subnet" "subnet" {
+    vpc_id = aws_vpc.vpc.id 
+    cidr_block = "0.0.0.0/0"
 
     tags = {
-        Name = "subnet-test"
+        Name = "subnet-devops"
     }
 }
 
-resource "aws_instance" "ec2-name" {
-    ami = "ami-0aad84f764a2bd39a" 
+resource "aws_ebs_volume" "volume" {
+  availability_zone = "sa-east-1c"
+  size              = 30
+
+  tags = {
+    Name = "Volume for all"
+  }
+}
+resource "aws_instance" "ec2" {
+    ami = var.my_ami 
     instance_type = var.my_intance_type
-    subnet_id = aws_subnet.subnet-name.id
+    subnet_id = aws_subnet.subnet.id
     tags = var.instance_tags
+}
+
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.volume.id
+  instance_id = aws_instance.ec2.id
 }
